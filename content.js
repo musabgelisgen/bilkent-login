@@ -3,6 +3,7 @@
 	var srs_password = "<srs_password_here>";
 	var email_address = "<email_addess_here>";
 	var email_password = "<email_password_here>";
+	var i_receive_srs_password_by_email = true;
 
 	var url = window.location.href;
 
@@ -22,8 +23,11 @@
 		document.getElementById("LoginForm_password").value = srs_password;
 		document.getElementById("login-form").submit();	
 
-		var win = window.open("http://webmail.bilkent.edu.tr/", '_blank');
-  		win.focus();
+		if (i_receive_srs_password_by_email){
+			var win = window.open("http://webmail.bilkent.edu.tr/", '_blank');
+  			win.focus();
+		}
+		
 	}
 	
 })();

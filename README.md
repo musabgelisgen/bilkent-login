@@ -36,7 +36,7 @@ By default, `i_receive_srs_password_by_email` is set to `true`. If you don't lik
 
 ##### 5. Start Using 
 
-Now, you can visit `https://stars.bilkent.edu.tr/accounts/login` and `https://webmail.bilkent.edu.tr/`, and enjoy logging in easily & safely.
+Now, you can visit srs and webmail, and enjoy logging in easily & safely.
 
 ##### 6. Help me improve.
 

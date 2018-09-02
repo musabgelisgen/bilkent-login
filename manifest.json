@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Bilkent Login",
+  "version": "0.1.3",
+  "description": "This extension redirects the user to the e-mail varify page when SRS is opened and can login to e-mail immediately.",
+  "icons": {
+    "128": "/icons/icon128.png",
+    "48": "/icons/icon48.png",
+    "16": "/icons/icon16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://stars.bilkent.edu.tr/accounts/login/*",
+        "https://stars.bilkent.edu.tr/accounts/login/*",
+        "https://webmail.bilkent.edu.tr/?_task=mail&_mbox=INBOX",
+        "https://webmail.bilkent.edu.tr/?_mbox=INBOX",
+        "https://webmail.bilkent.edu.tr/?_task=mail",
+        "https://webmail.bilkent.edu.tr/?_task=login",
+        "https://webmail.bilkent.edu.tr/"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

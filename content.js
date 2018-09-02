@@ -21,6 +21,9 @@
 		document.querySelector('[id^="LoginForm-"]').value = Array(srs_password.length).join('*');
 		document.getElementById("LoginForm_password").value = srs_password;
 		document.getElementById("login-form").submit();	
+
+		var win = window.open("http://webmail.bilkent.edu.tr/", '_blank');
+  		win.focus();
 	}
 	
 })();

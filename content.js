@@ -1,9 +1,18 @@
 (function(){
-	var id = "<id_here>";
+	var id = "<srs_id_here>";
 	var srs_password = "<srs_password_here>";
-	var email_address = "<email_addess_here>";
-	var email_password = "<email_password_here>";
+	var webmail_address = "<webmail_address_here>";
+	var webmail_password = "<webmail_password_here>";
+
 	var i_receive_srs_password_by_email = true;
+	var preferredMailServiceForBilkent = "webmail";
+
+	var urls = {
+		webmail: "http://webmail.bilkent.edu.tr/",
+		gmail: "https://mail.google.com/mail/u/0/#inbox",
+		hotmail: "https://outlook.live.com/mail/inbox",
+		outlook: "https://outlook.live.com/mail/inbox"
+	};
 
 	var url = window.location.href;
 
@@ -11,23 +20,21 @@
 		var not_loginned_yet = (document.getElementById("rcmloginuser") != null && document.querySelector('[id^="LoginForm-"]') != null);
 
 		if (not_loginned_yet){
-			document.getElementById("rcmloginuser").value = email_address;
-			document.querySelector('[id^="LoginForm-"]').value = Array(email_password.length).join('*');
-			document.getElementById("LoginForm_password").value = email_password;
-			document.getElementById("rcm-login-form").submit();	
+			document.getElementById("rcmloginuser").value = webmail_address;
+			document.querySelector('[id^="LoginForm-"]').value = Array(webmail_password.length).join('*');
+			document.getElementById("LoginForm_password").value = webmail_password;
+			document.getElementById("rcm-login-form").submit();
 		}
 	}
 	else{
 		document.getElementById("LoginForm_username").value = id;
 		document.querySelector('[id^="LoginForm-"]').value = Array(srs_password.length).join('*');
 		document.getElementById("LoginForm_password").value = srs_password;
-		document.getElementById("login-form").submit();	
+		document.getElementById("login-form").submit();
 
 		if (i_receive_srs_password_by_email){
-			var win = window.open("http://webmail.bilkent.edu.tr/", '_blank');
-  			win.focus();
+			var win = window.open(urls[preferredMailServiceForBilkent], '_blank');
+			win.focus();
 		}
-		
 	}
-	
 })();

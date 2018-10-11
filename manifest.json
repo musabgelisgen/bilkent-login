@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Bilkent Login",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This extension redirects the user to the e-mail varify page and opens email account when SRS is opened and can login to webmail instantly.",
   "icons": {
     "128": "/icons/icon128.png",

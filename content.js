@@ -15,8 +15,19 @@
 	};
 
 	var url = window.location.href;
+	
+	if (url.includes("/site/verifyEmail")) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open( "GET", "http://localhost:8099", true ); // false for synchronous request
+		xmlHttp.send(null);
 
-	if (url.includes("webmail")){
+		setTimeout(function() {
+			var verificationCode = xmlHttp.responseText;
+			document.getElementById("EmailVerifyForm_verifyCode").value = verificationCode;
+			document.getElementById("verifyEmail-form").submit();
+		}, 2000); //wait 2 seconds
+	}
+	else if (url.includes("webmail")){
 		var not_loginned_yet = (document.getElementById("rcmloginuser") != null && document.querySelector('[id^="LoginForm-"]') != null);
 
 		if (not_loginned_yet){

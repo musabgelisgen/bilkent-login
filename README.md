@@ -52,7 +52,3 @@ Now, you can visit srs and webmail, and enjoy logging in easily & safely.
 ##### 7. Support and Contribution
 
 All questions, bug reports and feature requests are handled via the [issues](https://github.com/musabgelisgen/bilkent-login/issues) which also acts as the knowledge base.
-
-##### 8. Thanks
-
-Special thanks to Ahmet Avcı for his opinions and suggestions on bilkent-login.
